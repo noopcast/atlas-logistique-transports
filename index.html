@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>
+      Atlas Logistique Transports - Transport de marchandises & mobilier partout en France
+    </title>
+    <meta
+      name="description"
+      content="Atlas Logistique Transports - Votre partenaire de confiance pour le transport de colis et mobilier B2B partout en France. Services de messagerie et navettes longue distance."
+    />
+    <meta
+      name="keywords"
+      content="transport logistique, transport colis, mobilier, B2B, messagerie, Brest, France"
+    />
+
+    <!-- Favicon placeholder -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/images/logo_bgWhite.png"
+    />
+
+    <!-- Google Fonts - Poppins -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* Custom styles */
+      body {
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .section {
+        padding: 4rem 1rem;
+      }
+
+      .card-service {
+        transition: all 0.3s ease;
+      }
+
+      .card-service:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-item {
+        overflow: hidden;
+      }
+
+      .gallery-item img {
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Testimonial carousel */
+      .testimonial-slide {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .testimonial-slide.active {
+        display: block;
+        opacity: 1;
+      }
+
+      /* Mobile menu */
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+
+      /* Animate on scroll */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black">
+    <!-- Header (Fixed) -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a
+          href="#"
+          class="flex items-center space-x-2"
+        >
+          <img
+            src="assets/images/logo_bgWhite.png"
+            alt="Logo Atlas"
+            class="h-8 w-auto"
+          />
+          <span class="font-semibold text-lg sm:text-xl">Atlas Logistique Transports</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href="#home"
+            class="font-medium hover:text-gray-600 transition"
+            >Accueil</a
+          >
+          <a
+            href="#about"
+            class="font-medium hover:text-gray-600 transition"
+            >À propos</a
+          >
+          <a
+            href="#services"
+            class="font-medium hover:text-gray-600 transition"
+            >Services</a
+          >
+          <a
+            href="#gallery"
+            class="font-medium hover:text-gray-600 transition"
+            >Galerie</a
+          >
+          <a
+            href="#reviews"
+            class="font-medium hover:text-gray-600 transition"
+            >Avis</a
+          >
+          <a
+            href="#contact"
+            class="font-medium hover:text-gray-600 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-black focus:outline-none"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 p-5"
+      >
+        <div class="flex justify-end">
+          <button
+            id="close-menu-button"
+            class="text-black focus:outline-none"
+          >
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col space-y-4 mt-10">
+          <a
+            href="#home"
+            class="font-medium hover:text-gray-600 transition py-2 border-b border-gray-200"
+            >Accueil</a
+          >
+          <a
+            href="#about"
+            class="font-medium hover:text-gray-600 transition py-2 border-b border-gray-200"
+            >À propos</a
+          >
+          <a
+            href="#services"
+            class="font-medium hover:text-gray-600 transition py-2 border-b border-gray-200"
+            >Services</a
+          >
+          <a
+            href="#gallery"
+            class="font-medium hover:text-gray-600 transition py-2 border-b border-gray-200"
+            >Galerie</a
+          >
+          <a
+            href="#reviews"
+            class="font-medium hover:text-gray-600 transition py-2 border-b border-gray-200"
+            >Avis</a
+          >
+          <a
+            href="#contact"
+            class="font-medium hover:text-gray-600 transition py-2"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="bg-black text-white min-h-screen flex items-center pt-16"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+        background-color: rgba(0, 0, 0, 0.7);
+      "
+    >
+      <div class="container mx-auto px-4 py-20 text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 fade-in">
+          Transport de marchandises & mobilier partout en France
+        </h1>
+        <p class="text-xl mb-10 max-w-3xl mx-auto fade-in">
+          Solutions logistiques professionnelles pour vos besoins d'entreprise. Rapidité, fiabilité
+          et sécurité garanties.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
+          <a
+            href="#services"
+            class="bg-white text-black font-semibold px-8 py-3 rounded-md hover:bg-gray-200 transition"
+            >Nos services</a
+          >
+          <a
+            href="#contact"
+            class="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-black transition"
+            >Demander un devis</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="section bg-white"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 fade-in">
+          À propos d'Atlas Logistique Transports
+        </h2>
+
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/2 fade-in">
+            <h3 class="text-2xl font-semibold mb-4">Notre mission</h3>
+            <p class="mb-6">
+              Fondée à Brest, Atlas Logistique Transports est spécialisée dans le transport
+              professionnel de colis et mobilier pour les entreprises. Notre objectif est de fournir
+              des solutions logistiques sur mesure qui répondent aux exigences les plus strictes de
+              nos clients B2B.
+            </p>
+            <p>
+              Notre expertise dans le transport en véhicules légers (7 à 20 m³) nous permet d'offrir
+              un service flexible, rapide et adapté aux besoins spécifiques de chaque client, tout
+              en garantissant une livraison fiable partout en France.
+            </p>
+          </div>
+
+          <div class="md:w-1/2 fade-in">
+            <!-- Placeholder image -->
+            <div class="bg-gray-200 w-full h-80 rounded-lg flex items-center justify-center">
+              <i class="fas fa-truck-fast text-8xl text-gray-400"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div class="bg-gray-100 p-8 rounded-lg text-center fade-in">
+            <div
+              class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-clock text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Service 24/7</h3>
+            <p>
+              Disponibilité permanente pour répondre à vos besoins urgents de transport, même en
+              dehors des heures de bureau.
+            </p>
+          </div>
+
+          <div class="bg-gray-100 p-8 rounded-lg text-center fade-in">
+            <div
+              class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-shield-alt text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Livraison fiable</h3>
+            <p>
+              Engagement sur les délais annoncés et suivi en temps réel pour un transport sécurisé
+              de vos marchandises.
+            </p>
+          </div>
+
+          <div class="bg-gray-100 p-8 rounded-lg text-center fade-in">
+            <div
+              class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-handshake text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Transport B2B</h3>
+            <p>
+              Solutions adaptées aux entreprises avec un service personnalisé et professionnel pour
+              chaque client.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="section bg-gray-50"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 fade-in">Nos services</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm card-service fade-in">
+            <div
+              class="bg-black text-white rounded-full w-14 h-14 flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-truck text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Transport de colis en VL</h3>
+            <p class="text-gray-700">
+              Véhicules de 7, 10 et 20 m³ pour s'adapter à vos envois de toutes tailles. Solutions
+              flexibles pour vos expéditions régulières ou ponctuelles.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm card-service fade-in">
+            <div
+              class="bg-black text-white rounded-full w-14 h-14 flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-couch text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Livraison de mobilier haut de gamme</h3>
+            <p class="text-gray-700">
+              Transport spécialisé avec équipement de protection pour vos meubles de valeur.
+              Manipulation experte et installation sur site possible.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm card-service fade-in">
+            <div
+              class="bg-black text-white rounded-full w-14 h-14 flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-shipping-fast text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Messagerie express</h3>
+            <p class="text-gray-700">
+              Livraison le jour même ou sous 24h pour vos envois urgents. Traçabilité complète et
+              confirmation de livraison immédiate.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm card-service fade-in">
+            <div
+              class="bg-black text-white rounded-full w-14 h-14 flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-route text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Navettes longues distances</h3>
+            <p class="text-gray-700">
+              Services réguliers entre grandes agglomérations françaises. Optimisation des coûts
+              pour vos transports planifiés vers toutes les régions.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-10 fade-in">
+          <a
+            href="#contact"
+            class="bg-black text-white font-semibold px-8 py-3 rounded-md hover:bg-gray-800 transition inline-block"
+            >Demander un devis personnalisé</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section
+      id="gallery"
+      class="section bg-white"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 fade-in">Notre galerie</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Gallery item 1 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
+              alt="Camion de livraison Atlas Logistique"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+
+          <!-- Gallery item 2 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
+              alt="Transport de mobilier"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+
+          <!-- Gallery item 3 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
+              alt="Livraison colis"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+
+          <!-- Gallery item 4 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1585421514738-01798e348b17?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
+              alt="Équipe de livraison"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+
+          <!-- Gallery item 5 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
+              alt="Flotte de véhicules"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+
+          <!-- Gallery item 6 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1518728123777-c9cd50070271?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
+              alt="Entrepôt logistique"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section
+      id="reviews"
+      class="section bg-gray-50"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 fade-in">Ce que disent nos clients</h2>
+
+        <div class="relative max-w-3xl mx-auto">
+          <!-- Testimonial Carousel -->
+          <div
+            id="testimonial-carousel"
+            class="relative"
+          >
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide active bg-white p-8 rounded-lg shadow-sm">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-500 flex">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="text-gray-700 italic mb-6">
+                "Atlas Logistique nous accompagne depuis plus de 2 ans pour toutes nos livraisons de
+                mobilier de bureau. Leur professionnalisme et leur fiabilité sont remarquables. Les
+                chauffeurs sont toujours ponctuels et prennent grand soin de nos produits."
+              </p>
+              <div>
+                <p class="font-semibold">Sophie Martin</p>
+                <p class="text-sm text-gray-500">Directrice Logistique, Buro Design</p>
+                <p class="text-xs text-gray-400 mt-2">18 mars 2023</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide bg-white p-8 rounded-lg shadow-sm">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-500 flex">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="text-gray-700 italic mb-6">
+                "Service impeccable pour nos transports urgents. Nous avons particulièrement
+                apprécié la réactivité de l'équipe et la qualité du suivi. Chaque livraison peut
+                être suivie en temps réel, ce qui nous permet de tenir nos clients informés."
+              </p>
+              <div>
+                <p class="font-semibold">Thomas Dubois</p>
+                <p class="text-sm text-gray-500">Gérant, Électronique Pro</p>
+                <p class="text-xs text-gray-400 mt-2">5 février 2023</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide bg-white p-8 rounded-lg shadow-sm">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-500 flex">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+              <p class="text-gray-700 italic mb-6">
+                "Nous utilisons les navettes longue distance d'Atlas pour nos livraisons
+                hebdomadaires entre Brest et Paris. Le rapport qualité-prix est excellent et les
+                délais sont toujours respectés, même en période de trafic routier intense."
+              </p>
+              <div>
+                <p class="font-semibold">Julie Lambert</p>
+                <p class="text-sm text-gray-500">Responsable Supply Chain, Mode Express</p>
+                <p class="text-xs text-gray-400 mt-2">12 janvier 2023</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide bg-white p-8 rounded-lg shadow-sm">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-500 flex">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="text-gray-700 italic mb-6">
+                "Un grand merci à l'équipe d'Atlas Logistique pour leur professionnalisme lors du
+                transport de notre matériel d'exposition. Les délais ont été respectés à la minute
+                près et notre équipement est arrivé en parfait état."
+              </p>
+              <div>
+                <p class="font-semibold">Nicolas Petit</p>
+                <p class="text-sm text-gray-500">Directeur événementiel, Expo Solutions</p>
+                <p class="text-xs text-gray-400 mt-2">30 novembre 2022</p>
+              </div>
+            </div>
+
+            <!-- Carousel Navigation -->
+            <button
+              id="prev-testimonial"
+              class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-12 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none hidden md:flex"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <button
+              id="next-testimonial"
+              class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-12 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none hidden md:flex"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Carousel Dots -->
+          <div
+            class="flex justify-center mt-8 space-x-2"
+            id="testimonial-dots"
+          >
+            <button class="w-3 h-3 rounded-full bg-black opacity-100 focus:outline-none"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-300 opacity-50 focus:outline-none"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-300 opacity-50 focus:outline-none"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-300 opacity-50 focus:outline-none"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="section bg-white"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 fade-in">Contactez-nous</h2>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- Contact Form -->
+          <div class="lg:w-1/2 fade-in">
+            <form
+              id="contact-form"
+              class="space-y-6"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="firstname"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Prénom</label
+                  >
+                  <input
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="lastname"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Nom</label
+                  >
+                  <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Téléphone</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="service"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Type de service</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                >
+                  <option value="">Sélectionnez un service</option>
+                  <option value="transport-colis">Transport de colis en VL</option>
+                  <option value="livraison-mobilier">Livraison de mobilier</option>
+                  <option value="messagerie">Messagerie express</option>
+                  <option value="navettes">Navettes longues distances</option>
+                  <option value="autre">Autre (précisez dans le message)</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                  required
+                ></textarea>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="w-full bg-black text-white font-semibold py-3 px-6 rounded-md hover:bg-gray-800 transition"
+                >
+                  Envoyer le message
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="lg:w-1/2 fade-in">
+            <div class="bg-gray-100 p-8 rounded-lg h-full">
+              <h3 class="text-2xl font-semibold mb-6">Nos coordonnées</h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1"
+                  >
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="ml-4">
+                    <p class="font-medium">Adresse</p>
+                    <p class="text-gray-700">1 Rue de la Villemarqué, 29200 Brest</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1"
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="ml-4">
+                    <p class="font-medium">Téléphone</p>
+                    <p class="text-gray-700">07 62 13 32 25</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="ml-4">
+                    <p class="font-medium">Email</p>
+                    <p class="text-gray-700">contact@atlaslogistique.fr</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1"
+                  >
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="ml-4">
+                    <p class="font-medium">Horaires</p>
+                    <p class="text-gray-700">Lundi - Vendredi: 8h - 19h</p>
+                    <p class="text-gray-700">Service d'urgence 24/7</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Google Maps -->
+              <div class="mt-8 h-64 bg-gray-200 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2648.8042642016403!2d-4.485398!3d48.390401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4816bbaf6e520f5f%3A0x40ca5cd36e4ab70!2s1%20Rue%20de%20la%20Villemarqu%C3%A9%2C%2029200%20Brest!5e0!3m2!1sfr!2sfr!4v1698238183000!5m2!1sfr!2sfr"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo & Description -->
+          <div class="md:col-span-1">
+            <div class="flex items-center mb-4">
+              <div class="bg-white p-2 rounded">
+                <span class="text-black font-bold text-xl">ATLAS</span>
+              </div>
+              <span class="ml-2 font-semibold">Logistique</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Solutions professionnelles de transport et logistique pour entreprises partout en
+              France.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="md:col-span-1">
+            <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >À propos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#gallery"
+                  class="text-gray-400 hover:text-white transition"
+                  >Galerie</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#reviews"
+                  class="text-gray-400 hover:text-white transition"
+                  >Avis clients</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="md:col-span-1">
+            <h4 class="text-lg font-semibold mb-4">Nos services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition"
+                  >Transport de colis</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition"
+                  >Livraison de mobilier</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition"
+                  >Messagerie express</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition"
+                  >Navettes longue distance</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="md:col-span-1">
+            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                <span>1 Rue de la Villemarqué, 29200 Brest</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                <span>07 62 13 32 25</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-3"></i>
+                <span>contact@atlaslogistique.fr</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="border-gray-800 my-8" />
+
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm">
+            &copy; 2023 Atlas Logistique Transports. Tous droits réservés.
+          </p>
+
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', function () {
+          mobileMenu.classList.add('active');
+        });
+
+        closeMenuButton.addEventListener('click', function () {
+          mobileMenu.classList.remove('active');
+        });
+
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener('click', function () {
+            mobileMenu.classList.remove('active');
+          });
+        });
+
+        // Testimonial carousel
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialDots = document.querySelectorAll('#testimonial-dots button');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+          testimonialSlides.forEach((slide) => slide.classList.remove('active'));
+          testimonialDots.forEach((dot) => {
+            dot.classList.remove('bg-black', 'opacity-100');
+            dot.classList.add('bg-gray-300', 'opacity-50');
+          });
+
+          testimonialSlides[index].classList.add('active');
+          testimonialDots[index].classList.remove('bg-gray-300', 'opacity-50');
+          testimonialDots[index].classList.add('bg-black', 'opacity-100');
+
+          currentSlide = index;
+        }
+
+        testimonialDots.forEach((dot, index) => {
+          dot.addEventListener('click', () => showSlide(index));
+        });
+
+        prevButton.addEventListener('click', () => {
+          let newIndex = currentSlide - 1;
+          if (newIndex < 0) newIndex = testimonialSlides.length - 1;
+          showSlide(newIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+          let newIndex = currentSlide + 1;
+          if (newIndex >= testimonialSlides.length) newIndex = 0;
+          showSlide(newIndex);
+        });
+
+        // Auto-advance carousel
+        setInterval(() => {
+          let newIndex = currentSlide + 1;
+          if (newIndex >= testimonialSlides.length) newIndex = 0;
+          showSlide(newIndex);
+        }, 5000);
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          // In a real implementation, this would send the data to a server
+          // For now, just show a success message
+          const formData = new FormData(contactForm);
+          let formValues = {};
+
+          for (let [key, value] of formData.entries()) {
+            formValues[key] = value;
+          }
+
+          console.log('Form submitted:', formValues);
+
+          // Show success message
+          contactForm.innerHTML = `
+                    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded" role="alert">
+                        <p class="font-bold">Message envoyé avec succès!</p>
+                        <p>Merci de nous avoir contactés. Notre équipe vous répondra dans les plus brefs délais.</p>
+                    </div>
+                `;
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Offset for fixed header
+                behavior: 'smooth',
+              });
+            }
+          });
+        });
+
+        // Animate elements on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        function checkFade() {
+          fadeElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight - 100) {
+              element.classList.add('visible');
+            }
+          });
+        }
+
+        // Initial check
+        checkFade();
+
+        // Check on scroll
+        window.addEventListener('scroll', checkFade);
+      });
+    </script>
+  </body>
+</html>
