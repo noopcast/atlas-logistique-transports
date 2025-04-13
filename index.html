@@ -84,18 +84,6 @@
         transform: scale(1.05);
       }
 
-      /* Testimonial carousel */
-      .testimonial-slide {
-        display: none;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-      }
-
-      .testimonial-slide.active {
-        display: block;
-        opacity: 1;
-      }
-
       /* Mobile menu */
       .mobile-menu {
         transform: translateX(100%);
@@ -153,16 +141,6 @@
             >Services</a
           >
           <a
-            href="#gallery"
-            class="font-medium hover:text-gray-600 transition"
-            >Galerie</a
-          >
-          <a
-            href="#reviews"
-            class="font-medium hover:text-gray-600 transition"
-            >Avis</a
-          >
-          <a
             href="#contact"
             class="font-medium hover:text-gray-600 transition"
             >Contact</a
@@ -208,16 +186,6 @@
             >Services</a
           >
           <a
-            href="#gallery"
-            class="font-medium hover:text-gray-600 transition py-2 border-b border-gray-200"
-            >Galerie</a
-          >
-          <a
-            href="#reviews"
-            class="font-medium hover:text-gray-600 transition py-2 border-b border-gray-200"
-            >Avis</a
-          >
-          <a
             href="#contact"
             class="font-medium hover:text-gray-600 transition py-2"
             >Contact</a
@@ -240,7 +208,7 @@
     >
       <div class="container mx-auto px-4 py-20 text-center">
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 fade-in">
-          Transport de marchandises & mobilier partout en France
+          Transport de marchandises partout en France
         </h1>
         <p class="text-xl mb-10 max-w-3xl mx-auto fade-in">
           Solutions logistiques professionnelles pour vos besoins d'entreprise. Rapidité, fiabilité
@@ -289,9 +257,11 @@
 
           <div class="md:w-1/2 fade-in">
             <!-- Placeholder image -->
-            <div class="bg-gray-200 w-full h-80 rounded-lg flex items-center justify-center">
-              <i class="fas fa-truck-fast text-8xl text-gray-400"></i>
-            </div>
+              <img
+                src="assets/images/depot.png"
+                alt="Logo Atlas"
+                class="w-full h-auto object-cover rounded-lg shadow-lg"
+              />
           </div>
         </div>
 
@@ -333,6 +303,43 @@
               Solutions adaptées aux entreprises avec un service personnalisé et professionnel pour
               chaque client.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section
+      id="gallery"
+      class="section bg-white"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Gallery item 1 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="assets/images/depot_logo.png"
+              alt="Transport de mobilier"
+              class="w-full h-80 object-cover object-top"
+            />
+          </div>
+
+          <!-- Gallery item 3 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="assets/images/livreur_tsm2.png"
+              alt="Livraison colis"
+              class="w-full h-80 object-cover"
+            />
+          </div>
+
+          <!-- Gallery item 4 -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
+            <img
+              src="assets/images/livreur_tsm.png"
+              alt="Flotte de véhicules"
+              class="w-full h-80 object-cover"
+            />
           </div>
         </div>
       </div>
@@ -410,208 +417,6 @@
             class="bg-black text-white font-semibold px-8 py-3 rounded-md hover:bg-gray-800 transition inline-block"
             >Demander un devis personnalisé</a
           >
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section
-      id="gallery"
-      class="section bg-white"
-    >
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 fade-in">Notre galerie</h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Gallery item 1 -->
-          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
-              alt="Camion de livraison Atlas Logistique"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-
-          <!-- Gallery item 2 -->
-          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
-              alt="Transport de mobilier"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-
-          <!-- Gallery item 3 -->
-          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
-              alt="Livraison colis"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-
-          <!-- Gallery item 4 -->
-          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1585421514738-01798e348b17?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
-              alt="Équipe de livraison"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-
-          <!-- Gallery item 5 -->
-          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
-              alt="Flotte de véhicules"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-
-          <!-- Gallery item 6 -->
-          <div class="gallery-item rounded-lg overflow-hidden shadow-sm fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1518728123777-c9cd50070271?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80"
-              alt="Entrepôt logistique"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section
-      id="reviews"
-      class="section bg-gray-50"
-    >
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 fade-in">Ce que disent nos clients</h2>
-
-        <div class="relative max-w-3xl mx-auto">
-          <!-- Testimonial Carousel -->
-          <div
-            id="testimonial-carousel"
-            class="relative"
-          >
-            <!-- Testimonial 1 -->
-            <div class="testimonial-slide active bg-white p-8 rounded-lg shadow-sm">
-              <div class="flex items-center mb-4">
-                <div class="text-yellow-500 flex">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <p class="text-gray-700 italic mb-6">
-                "Atlas Logistique nous accompagne depuis plus de 2 ans pour toutes nos livraisons de
-                mobilier de bureau. Leur professionnalisme et leur fiabilité sont remarquables. Les
-                chauffeurs sont toujours ponctuels et prennent grand soin de nos produits."
-              </p>
-              <div>
-                <p class="font-semibold">Sophie Martin</p>
-                <p class="text-sm text-gray-500">Directrice Logistique, Buro Design</p>
-                <p class="text-xs text-gray-400 mt-2">18 mars 2023</p>
-              </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="testimonial-slide bg-white p-8 rounded-lg shadow-sm">
-              <div class="flex items-center mb-4">
-                <div class="text-yellow-500 flex">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <p class="text-gray-700 italic mb-6">
-                "Service impeccable pour nos transports urgents. Nous avons particulièrement
-                apprécié la réactivité de l'équipe et la qualité du suivi. Chaque livraison peut
-                être suivie en temps réel, ce qui nous permet de tenir nos clients informés."
-              </p>
-              <div>
-                <p class="font-semibold">Thomas Dubois</p>
-                <p class="text-sm text-gray-500">Gérant, Électronique Pro</p>
-                <p class="text-xs text-gray-400 mt-2">5 février 2023</p>
-              </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="testimonial-slide bg-white p-8 rounded-lg shadow-sm">
-              <div class="flex items-center mb-4">
-                <div class="text-yellow-500 flex">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-              </div>
-              <p class="text-gray-700 italic mb-6">
-                "Nous utilisons les navettes longue distance d'Atlas pour nos livraisons
-                hebdomadaires entre Brest et Paris. Le rapport qualité-prix est excellent et les
-                délais sont toujours respectés, même en période de trafic routier intense."
-              </p>
-              <div>
-                <p class="font-semibold">Julie Lambert</p>
-                <p class="text-sm text-gray-500">Responsable Supply Chain, Mode Express</p>
-                <p class="text-xs text-gray-400 mt-2">12 janvier 2023</p>
-              </div>
-            </div>
-
-            <!-- Testimonial 4 -->
-            <div class="testimonial-slide bg-white p-8 rounded-lg shadow-sm">
-              <div class="flex items-center mb-4">
-                <div class="text-yellow-500 flex">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-              <p class="text-gray-700 italic mb-6">
-                "Un grand merci à l'équipe d'Atlas Logistique pour leur professionnalisme lors du
-                transport de notre matériel d'exposition. Les délais ont été respectés à la minute
-                près et notre équipement est arrivé en parfait état."
-              </p>
-              <div>
-                <p class="font-semibold">Nicolas Petit</p>
-                <p class="text-sm text-gray-500">Directeur événementiel, Expo Solutions</p>
-                <p class="text-xs text-gray-400 mt-2">30 novembre 2022</p>
-              </div>
-            </div>
-
-            <!-- Carousel Navigation -->
-            <button
-              id="prev-testimonial"
-              class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-12 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none hidden md:flex"
-            >
-              <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <button
-              id="next-testimonial"
-              class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-12 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center focus:outline-none hidden md:flex"
-            >
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-
-          <!-- Carousel Dots -->
-          <div
-            class="flex justify-center mt-8 space-x-2"
-            id="testimonial-dots"
-          >
-            <button class="w-3 h-3 rounded-full bg-black opacity-100 focus:outline-none"></button>
-            <button class="w-3 h-3 rounded-full bg-gray-300 opacity-50 focus:outline-none"></button>
-            <button class="w-3 h-3 rounded-full bg-gray-300 opacity-50 focus:outline-none"></button>
-            <button class="w-3 h-3 rounded-full bg-gray-300 opacity-50 focus:outline-none"></button>
-          </div>
         </div>
       </div>
     </section>
@@ -707,10 +512,10 @@
                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
                 >
                   <option value="">Sélectionnez un service</option>
-                  <option value="transport-colis">Transport de colis en VL</option>
-                  <option value="livraison-mobilier">Livraison de mobilier</option>
-                  <option value="messagerie">Messagerie express</option>
-                  <option value="navettes">Navettes longues distances</option>
+                  <option value="transport-colis">Transport de petits colis</option>
+                  <option value="livraison-mobilier">Transport de moyens/grands colis</option>
+                  <option value="navettes">Navettes moyennes/longues distances</option>
+                  <option value="messagerie">Livraison express</option>
                   <option value="autre">Autre (précisez dans le message)</option>
                 </select>
               </div>
@@ -823,10 +628,12 @@
           <!-- Logo & Description -->
           <div class="md:col-span-1">
             <div class="flex items-center mb-4">
-              <div class="bg-white p-2 rounded">
-                <span class="text-black font-bold text-xl">ATLAS</span>
-              </div>
-              <span class="ml-2 font-semibold">Logistique</span>
+              <img
+                src="assets/images/logo_inverted.png"
+                alt="Logo Atlas"
+                class="h-8 w-auto"
+              />
+              <span class="ml-2 font-semibold">Atlas Logistique Transports</span>
             </div>
             <p class="text-gray-400 text-sm">
               Solutions professionnelles de transport et logistique pour entreprises partout en
@@ -857,20 +664,6 @@
                   href="#services"
                   class="text-gray-400 hover:text-white transition"
                   >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#gallery"
-                  class="text-gray-400 hover:text-white transition"
-                  >Galerie</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#reviews"
-                  class="text-gray-400 hover:text-white transition"
-                  >Avis clients</a
                 >
               </li>
               <li>
@@ -942,7 +735,7 @@
 
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-400 text-sm">
-            &copy; 2023 Atlas Logistique Transports. Tous droits réservés.
+            &copy; 2025 Atlas Logistique Transports. Tous droits réservés.
           </p>
 
           <div class="flex space-x-4 mt-4 md:mt-0">
@@ -984,50 +777,6 @@
             mobileMenu.classList.remove('active');
           });
         });
-
-        // Testimonial carousel
-        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-        const testimonialDots = document.querySelectorAll('#testimonial-dots button');
-        const prevButton = document.getElementById('prev-testimonial');
-        const nextButton = document.getElementById('next-testimonial');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-          testimonialSlides.forEach((slide) => slide.classList.remove('active'));
-          testimonialDots.forEach((dot) => {
-            dot.classList.remove('bg-black', 'opacity-100');
-            dot.classList.add('bg-gray-300', 'opacity-50');
-          });
-
-          testimonialSlides[index].classList.add('active');
-          testimonialDots[index].classList.remove('bg-gray-300', 'opacity-50');
-          testimonialDots[index].classList.add('bg-black', 'opacity-100');
-
-          currentSlide = index;
-        }
-
-        testimonialDots.forEach((dot, index) => {
-          dot.addEventListener('click', () => showSlide(index));
-        });
-
-        prevButton.addEventListener('click', () => {
-          let newIndex = currentSlide - 1;
-          if (newIndex < 0) newIndex = testimonialSlides.length - 1;
-          showSlide(newIndex);
-        });
-
-        nextButton.addEventListener('click', () => {
-          let newIndex = currentSlide + 1;
-          if (newIndex >= testimonialSlides.length) newIndex = 0;
-          showSlide(newIndex);
-        });
-
-        // Auto-advance carousel
-        setInterval(() => {
-          let newIndex = currentSlide + 1;
-          if (newIndex >= testimonialSlides.length) newIndex = 0;
-          showSlide(newIndex);
-        }, 5000);
 
         // Contact form submission
         const contactForm = document.getElementById('contact-form');
